@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="el"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Επαναληπτικό Τεστ Ιστορίας – Γεωμετρικά χρόνια — Κεφάλαια 1 έως 4</title>
+<style>
+:root{--g:#2e7d32;--r:#c62828;--b:#1e4f8a;--bg:#f4f7fb}
+*{box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;font-size:22px;line-height:1.45;margin:0;background:var(--bg);color:#1a1a1a}
+.wrap{max-width:900px;margin:0 auto;padding:16px}
+h1{text-align:center;color:var(--b);font-size:32px;margin:10px 0 0}.sub{text-align:center;font-size:22px;margin:0 0 14px}
+.card{background:#fff;border-radius:14px;padding:16px 20px;margin:16px 0;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+h2{font-size:25px;margin:0 0 6px;color:var(--b)}.hint{font-style:italic;color:#444;margin:0 0 10px}
+.q{margin:14px 0 6px;font-weight:bold}
+.opt,.tf button{display:block;width:100%;text-align:left;font-size:21px;padding:10px 14px;margin:6px 0;border:2px solid #b8c4d6;border-radius:10px;background:#fff;cursor:pointer;font-family:inherit}
+.tf{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0}.tf span{flex:1 1 100%}
+.tf button{display:inline-block;width:70px;text-align:center;margin:0}
+.sel{border-color:var(--b)!important;background:#e3eefc!important}
+.ok{border-color:var(--g)!important;background:#e3f4e4!important}.bad{border-color:var(--r)!important;background:#fde6e6!important}
+.bank{border:2px dashed #8aa;padding:10px;border-radius:10px;text-align:center;font-weight:bold;margin:8px 0}
+select{font-size:20px;padding:4px 6px;border:2px solid #b8c4d6;border-radius:8px;font-family:inherit;max-width:100%}
+select.ok{background:#e3f4e4}select.bad{background:#fde6e6}
+table{border-collapse:collapse;width:100%}td{border:1px solid #bbb;padding:8px 10px;vertical-align:middle}
+textarea{width:100%;min-height:90px;font-size:20px;font-family:inherit;padding:8px;border:2px solid #b8c4d6;border-radius:10px}
+.ans{display:none;background:#fff8e1;border-left:5px solid #f9a825;padding:8px 12px;margin:6px 0}
+.btn{font-size:21px;padding:10px 20px;border:0;border-radius:10px;background:var(--b);color:#fff;cursor:pointer;margin:6px 8px 6px 0;font-family:inherit}
+.btn.alt{background:#666}.small{font-size:18px;padding:6px 12px;background:#8a6d1b}
+#res{font-size:26px;font-weight:bold;text-align:center;margin:10px 0}
+.expl{font-size:18px;color:var(--g);display:block}
+footer{text-align:center;font-size:16px;color:#444;margin:24px 0}
+@media print{body{background:#fff;font-size:15px}.btn,.small{display:none}.card{box-shadow:none;border:1px solid #ccc;padding:6px 10px;margin:6px 0}h1{font-size:22px}h2{font-size:17px}.opt,.tf button{font-size:14px;padding:3px 8px;margin:2px 0}.wrap{padding:0}}
+</style></head><body><div class="wrap">
+<h1>Επαναληπτικό Τεστ Ιστορίας</h1><p class="sub">Γεωμετρικά χρόνια — Κεφάλαια 1 έως 4</p>
+<div class="card"><label>Όνομα: <input id="nm" style="font-size:20px;padding:4px 8px;width:60%"></label></div>
+<div id="app"></div>
+<div class="card"><button class="btn" onclick="check()">✔ Έλεγχος</button><button class="btn alt" onclick="location.reload()">↺ Από την αρχή</button><button class="btn alt" onclick="window.print()">🖨 Εκτύπωση</button><div id="res"></div></div>
+<footer>© myspiderwebsite</footer></div>
+<script>
+const D={"title":"Επαναληπτικό Τεστ Ιστορίας","subtitle":"Γεωμετρικά χρόνια — Κεφάλαια 1 έως 4","A":[{"q":"Τι ονομάζουμε «κάθοδο των Δωριέων»;","o":["Τον πόλεμο της Τροίας","Τη μετακίνηση των Δωριέων προς τη νότια Ελλάδα","Την ίδρυση αποικιών","Το ταξίδι του Οδυσσέα"],"a":1},{"q":"Οι είλωτες ήταν:","o":["Φοίνικες έμποροι","Δωριείς πολεμιστές","οι παλιοί κάτοικοι που καλλιεργούσαν τη γη","τεχνίτες αγγείων"],"a":2},{"q":"Τα νέα μέρη όπου πήγαν οι Έλληνες που έφυγαν ονομάζονται:","o":["είλωτες","αποικίες","διάλεκτοι","φυλές"],"a":1},{"q":"Η Οδύσσεια μιλούσε για:","o":["τις περιπέτειες του Οδυσσέα","τον πόλεμο της Τροίας","την κάθοδο των Δωριέων","τους δώδεκα θεούς"],"a":0},{"q":"Η τέχνη ονομάστηκε γεωμετρική επειδή:","o":["τα κτίρια ήταν μεγάλα","τα αγάλματα ήταν μεταλλικά","οι ζωγραφιές στα αγγεία έμοιαζαν με γεωμετρικά σχήματα","έγραφαν από δεξιά προς αριστερά"],"a":2}],"B":[["Η κάθοδος των Δωριέων έγινε μονομιάς.",false],["Οι Ίωνες ξεκίνησαν από την Αττική.",true],["Η Ιλιάδα μιλούσε για τις περιπέτειες του Οδυσσέα.",false],["Την Ιλιάδα και την Οδύσσεια τις έγραψε ο Όμηρος.",true],["Τα πρώτα αγάλματα ήταν ξύλινα και παρίσταναν θεούς.",true],["Στην αρχή οι Έλληνες έγραφαν από τα αριστερά προς τα δεξιά.",false]],"C":{"bank":["Δωριείς","Πελοπόννησο","είλωτες","δωρική","ξύλινα","μέταλλο","Φοίνικες","φωνήεντα","Αθήνα","πέτρινα"],"paras":["Οι (1) ____________ ήταν το τελευταίο ελληνικό φύλο που κατευθύνθηκε προς τη νότια Ελλάδα και πέρασε στην (2) ____________. Οι παλιοί κάτοικοι έγιναν (3) ____________ και καλλιεργούσαν τη γη. Τη διάλεκτό τους την ονομάζουμε (4) ____________.","Τα πρώτα αγάλματα ήταν (5) ____________. Αργότερα τα έφτιαχναν από (6) ____________. Οι Έλληνες πήραν το αλφάβητο από τους (7) ____________ και πρόσθεσαν τα (8) ____________."],"ans":["Δωριείς","Πελοπόννησο","είλωτες","δωρική","ξύλινα","μέταλλο","Φοίνικες","φωνήεντα"]},"D1":{"title":"Αντιστοίχισε σωστά (μία επιλογή περισσεύει). Γράψε το γράμμα στο κενό.","left":["Οι Ίωνες ξεκίνησαν από","Οι Δωριείς πήγαν στη","άποικοι","Ιλιάδα","είλωτες"],"right":["οι κάτοικοι των αποικιών","Αττική","ποίημα για τον πόλεμο της Τροίας","Ρόδο","οι παλιοί κάτοικοι που καλλιεργούσαν τη γη","ποίημα για τις περιπέτειες του Οδυσσέα"],"ans":["β","δ","α","γ","ε"]},"E":[{"q":"Γιατί κάποιοι Έλληνες έφυγαν σε άλλα μέρη; Τι έκαναν εκεί;","a":"Έφυγαν επειδή ήθελαν να βρουν καλύτερη τύχη. Στα νέα μέρη γνώρισαν άλλους λαούς και έχτισαν ωραίους ναούς."},{"q":"Πώς κυριάρχησαν οι Δωριείς στην Πελοπόννησο; Τι έγινε με τους παλιούς κατοίκους;","a":"Κυριάρχησαν με τη δύναμή τους. Πολλοί παλιοί κάτοικοι έχασαν την περιουσία τους και έγιναν δούλοι (είλωτες). Ο μυκηναϊκός πολιτισμός σταμάτησε να αναπτύσσεται."},{"q":"Γιατί χρησιμοποιούσαν τα αγγεία; Πώς ήταν τα κτίρια της εποχής;","a":"Τα αγγεία τα χρησιμοποιούσαν για τις καθημερινές ανάγκες, π.χ. για να αποθηκεύουν λάδι, κρασί και άλλα προϊόντα. Τα κτίρια ήταν μικρά και απλά, με θεμέλια από πέτρες."}]};const L=["α","β","γ","δ","ε","στ"];
+const S={A:[],B:[]};let checked=false;
+const app=document.getElementById('app');let h='';
+h+='<div class="card"><h2>Α. Πολλαπλής επιλογής ('+D.A.length+' × 4 = 20 μ.)</h2><p class="hint">Πάτα στη σωστή απάντηση.</p>';
+D.A.forEach((q,i)=>{h+='<div class="q">'+(i+1)+'. '+q.q+'</div>';q.o.forEach((o,j)=>h+='<button class="opt" data-a="'+i+'" data-j="'+j+'" onclick="pickA('+i+','+j+')">'+L[j]+') '+o+'</button>');});
+h+='</div><div class="card"><h2>Β. Σωστό ή Λάθος; ('+D.B.length+' × 3 = 18 μ.)</h2>';
+D.B.forEach((b,i)=>h+='<div class="tf" id="tf'+i+'"><span>'+(i+1)+'. '+b[0]+'</span><button onclick="pickB('+i+',true)">Σ</button><button onclick="pickB('+i+',false)">Λ</button></div>');
+h+='</div><div class="card"><h2>Γ. Συμπλήρωση κενών ('+D.C.ans.length+' × 3 = 24 μ.)</h2><p class="hint">Διάλεξε λέξη από τη λίστα σε κάθε κενό. Δύο λέξεις περισσεύουν.</p><div class="bank">'+D.C.bank.join(' • ')+'</div>';
+let n=0;const opts='<option value="">—</option>'+[...D.C.bank].sort((a,b)=>a.localeCompare(b,'el')).map(w=>'<option>'+w+'</option>').join('');
+D.C.paras.forEach(t=>{h+='<p>'+t.replace(/_{3,}/g,()=>'<select class="gap" id="g'+(n++)+'">'+opts+'</select>')+'</p>';});
+h+='</div><div class="card"><h2>Δ. Αντιστοίχιση ('+D.D1.left.length+' × 4 = 20 μ.)</h2><p class="hint">'+D.D1.title+'</p><table>';
+const nr=Math.max(D.D1.left.length,D.D1.right.length);
+for(let i=0;i<nr;i++){h+='<tr><td>'+(i<D.D1.left.length?(i+1)+'. '+D.D1.left[i]+' → <select class="mt" id="m'+i+'"><option value="">—</option>'+L.map(l=>'<option>'+l+'</option>').join('')+'</select>':'')+'</td><td>'+L[i]+') '+D.D1.right[i]+'</td></tr>';}
+h+='</table></div><div class="card"><h2>Ε. Ερωτήσεις ανάπτυξης (3 × 6 = 18 μ.)</h2><p class="hint">Γράψε την απάντησή σου και μετά δες την ενδεικτική.</p>';
+D.E.forEach((e,i)=>h+='<div class="q">'+(i+1)+'. '+e.q+'</div><textarea></textarea><button class="btn small" onclick="document.getElementById(\'e'+i+'\').style.display=\'block\'">Δες ενδεικτική απάντηση</button><div class="ans" id="e'+i+'">'+e.a+'</div>');
+h+='</div>';app.innerHTML=h;
+function pickA(i,j){if(checked)return;S.A[i]=j;document.querySelectorAll('[data-a="'+i+'"]').forEach(b=>b.classList.toggle('sel',+b.dataset.j===j));}
+function pickB(i,v){if(checked)return;S.B[i]=v;const bs=document.querySelectorAll('#tf'+i+' button');bs[0].classList.toggle('sel',v===true);bs[1].classList.toggle('sel',v===false);}
+function check(){checked=true;let sc=0;
+D.A.forEach((q,i)=>{document.querySelectorAll('[data-a="'+i+'"]').forEach(b=>{const j=+b.dataset.j;b.classList.remove('sel');if(j===q.a)b.classList.add('ok');else if(S.A[i]===j)b.classList.add('bad');});if(S.A[i]===q.a)sc+=4;});
+D.B.forEach((b,i)=>{const bs=document.querySelectorAll('#tf'+i+' button');bs.forEach(x=>x.classList.remove('sel'));bs[b[1]?0:1].classList.add('ok');if(S.B[i]!==undefined&&S.B[i]!==b[1])bs[b[1]?1:0].classList.add('bad');if(S.B[i]===b[1])sc+=3;});
+D.C.ans.forEach((a,i)=>{const s=document.getElementById('g'+i);const okk=s.value===a;s.classList.add(okk?'ok':'bad');if(okk)sc+=3;else{let e=s.parentNode.querySelector('.expl[data-g="'+i+'"]');if(!e){e=document.createElement('span');e.className='expl';e.dataset.g=i;e.textContent='('+(i+1)+') '+a;s.after(e);}}});
+D.D1.ans.forEach((a,i)=>{const s=document.getElementById('m'+i);const okk=s.value===a;s.classList.add(okk?'ok':'bad');if(okk)sc+=4;else{const e=document.createElement('span');e.className='expl';e.textContent='σωστό: '+a;s.after(e);}});
+document.getElementById('res').innerHTML='Βαθμολογία: '+sc+' / 82<br><span style="font-size:18px;font-weight:normal">Οι ερωτήσεις ανάπτυξης (18 μ.) βαθμολογούνται από την εκπαιδευτικό.</span>';
+document.getElementById('res').scrollIntoView({behavior:'smooth'});}
+</script></body></html>
