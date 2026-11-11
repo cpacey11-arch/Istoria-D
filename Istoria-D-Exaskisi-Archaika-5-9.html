@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Ιστορία Δ΄ Τάξης – Εξάσκηση: Αρχαϊκά χρόνια (κεφ. 5–9)</title>
+<style>
+  :root { --green:#3b6e2f; --tint:#e2efda; --ok:#1b7f3b; --bad:#c0392b; --ink:#1d1d1d; --bg:#f4f1e8; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family: Arial, Helvetica, sans-serif; font-size:24px; line-height:1.5; }
+  .page { max-width: 900px; margin: 0 auto; background:#fff; padding: 28px 36px 20px; min-height:100vh; }
+  h1 { text-align:center; color:var(--green); font-size:1.5em; margin:0 0 2px; }
+  .sub { text-align:center; font-weight:bold; font-size:1.05em; margin:0 0 12px; }
+  .name { border-bottom:3px solid var(--green); padding-bottom:10px; margin-bottom:6px; }
+  .name input { font:inherit; border:0; border-bottom:2px solid #888; width:11em; background:transparent; }
+  h2 { background:var(--tint); font-size:1.05em; margin:22px 0 10px; padding:6px 10px; break-after:avoid; }
+  h2 .n { color:var(--green); }
+  p.item { margin:10px 0; }
+  .bank { background:#fff8dc; border:2px solid #7f9f6f; text-align:center; font-weight:bold; padding:8px 10px; margin:6px 0 10px; }
+  input.blank { font:inherit; border:0; border-bottom:3px solid #777; background:#fffbe6; text-align:center; width:6.5em; padding:0 4px; }
+  input.blank.s { width:3em; } input.blank.m { width:6.5em; } input.blank.xl { width:11em; }
+  select { font:inherit; padding:3px 6px; border:2px solid #777; border-radius:6px; background:#fffbe6; max-width:100%; }
+  .row { display:flex; gap:14px; align-items:center; justify-content:space-between; padding:8px 0; border-bottom:1px dashed #ccc; break-inside:avoid; }
+  .row .t { flex:1; }
+  .letters { background:#f6f9f3; border:2px solid #7f9f6f; padding:8px 14px; margin:6px 0 10px; break-inside:avoid; }
+  .letters div { margin:4px 0; }
+  .tf { display:flex; gap:10px; flex:none; }
+  .tf button { font:inherit; font-weight:bold; width:3.2em; padding:4px 0; border:3px solid #888; background:#fff; border-radius:8px; cursor:pointer; }
+  .tf button.sel { background:#ffe58a; border-color:#b58900; }
+  .mk { display:inline-block; width:1.4em; text-align:center; font-weight:bold; }
+  .ok .mk::after { content:"✓"; color:var(--ok); }
+  .bad .mk::after { content:"✗"; color:var(--bad); }
+  .ok input.blank, .ok select, .ok .tf button.sel { border-color:var(--ok); }
+  .bad input.blank, .bad select, .bad .tf button.sel { border-color:var(--bad); }
+  .bar { position:sticky; bottom:0; background:#fff; border-top:3px solid var(--green); padding:10px 0; margin-top:24px; display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+  .bar button { font:inherit; font-weight:bold; padding:8px 22px; border-radius:10px; border:3px solid var(--green); cursor:pointer; }
+  #check { background:var(--green); color:#fff; }
+  #reset { background:#fff; color:var(--green); }
+  #score { font-weight:bold; }
+  footer { text-align:center; color:#555; font-size:0.7em; margin-top:10px; }
+  @media (max-width:640px) { body { font-size:20px; } .page { padding:18px 14px; } .row { flex-wrap:wrap; } }
+  /* Εκτύπωση: A4, 2 σελίδες με μεγάλα γράμματα */
+  @page { size: A4; margin: 11mm 13mm 12mm; }
+  @media print {
+    html, body { background:#fff; }
+    body { font-size:13pt; line-height:1.3; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .page { max-width:none; padding:0; min-height:0; }
+    .bar { display:none; }
+    h1 { font-size:20pt; } h2 { margin:9px 0 5px; padding:2px 8px; }
+    p.item { margin:4px 0; } .row { padding:2px 0; } .letters { margin:3px 0 5px; padding:4px 12px; } .letters div { margin:1px 0; }
+    .bank { margin:3px 0 5px; padding:4px 8px; }
+    .tf button { padding:0; } select { padding:0 4px; } .name { padding-bottom:6px; margin-bottom:2px; }
+    input { -webkit-appearance:none; appearance:none; }
+    footer { margin-top:6px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+<h1>Ιστορία Δ΄ Τάξης</h1>
+<p class="sub">Εξάσκηση: Αρχαϊκά χρόνια (κεφ. 5–9)</p>
+<div class="name">Όνομα: <input type="text" aria-label="Όνομα"> &nbsp; Ημερομηνία: <input type="text" aria-label="Ημερομηνία" style="width:7em"></div>
+<h2><span class="n">1.</span> Συμπλήρωσε τα κενά.</h2>
+<p class="item q">α) Γύρω από την πόλη υπήρχαν <input class="blank m" data-ans="τείχη">. <span class="mk"></span></p>
+<p class="item q">β) Τα αρχαϊκά χρόνια κράτησαν από τον <input class="blank s" data-ans="8|8ο|8o|8ος|8os"> αιώνα έως τον <input class="blank s" data-ans="5|5ο|5o|5ος|5os"> αιώνα π.Χ. <span class="mk"></span></p>
+<p class="item q">γ) Κάποιοι Έλληνες πήγαν να ζήσουν στα παράλια της Μεσογείου και του <input class="blank xl" data-ans="Εύξεινου Πόντου|Εύξεινου">. <span class="mk"></span></p>
+<p class="item q">δ) Οι δύο μεγαλύτερες πόλεις-κράτη ήταν η <input class="blank m" data-set="cities"> και η <input class="blank m" data-set="cities">. <span class="mk"></span></p>
+<p class="item q">ε) Το σημαντικότερο σημείο της πόλης ήταν η <input class="blank m" data-ans="ακρόπολη">, ένας λόφος με ναούς. <span class="mk"></span></p>
+<h2><span class="n">2.</span> Αντιστοίχισε κάθε πολίτευμα με το σωστό γράμμα.</h2>
+<div class="letters">
+  <div><b>Α.</b> Την εξουσία την έχει ο λαός.</div>
+  <div><b>Β.</b> Την εξουσία την έχουν οι άριστοι, που έχουν πολλά χωράφια.</div>
+  <div><b>Γ.</b> Την εξουσία την έχει ο βασιλιάς.</div>
+  <div><b>Δ.</b> Την εξουσία την έχουν λίγοι και πλούσιοι άνθρωποι.</div>
+  <div><b>Ε.</b> Την εξουσία την έχουν οι τύραννοι και κάνουν ό,τι θέλουν.</div>
+</div>
+<div class="row q"><span class="t"><b>1. Τυραννία</b></span><select data-ans="Ε"><option value="">—</option><option>Α</option><option>Β</option><option>Γ</option><option>Δ</option><option>Ε</option></select><span class="mk"></span></div>
+<div class="row q"><span class="t"><b>2. Βασιλεία</b></span><select data-ans="Γ"><option value="">—</option><option>Α</option><option>Β</option><option>Γ</option><option>Δ</option><option>Ε</option></select><span class="mk"></span></div>
+<div class="row q"><span class="t"><b>3. Δημοκρατία</b></span><select data-ans="Α"><option value="">—</option><option>Α</option><option>Β</option><option>Γ</option><option>Δ</option><option>Ε</option></select><span class="mk"></span></div>
+<div class="row q"><span class="t"><b>4. Ολιγαρχία</b></span><select data-ans="Δ"><option value="">—</option><option>Α</option><option>Β</option><option>Γ</option><option>Δ</option><option>Ε</option></select><span class="mk"></span></div>
+<div class="row q"><span class="t"><b>5. Αριστοκρατία</b></span><select data-ans="Β"><option value="">—</option><option>Α</option><option>Β</option><option>Γ</option><option>Δ</option><option>Ε</option></select><span class="mk"></span></div>
+<p class="item q">Ποιο πολίτευμα ήρθε μετά την ολιγαρχία; <input class="blank m" data-ans="τυραννία|τυραννίδα"> <span class="mk"></span></p>
+<h2><span class="n">3.</span> Διάλεξε λέξη από το πλαίσιο και συμπλήρωσε τα κενά.</h2>
+<div class="bank">Δελφών &nbsp;•&nbsp; τέσσερα &nbsp;•&nbsp; αμφικτιονίες &nbsp;•&nbsp; μαντεία &nbsp;•&nbsp; ελιάς &nbsp;•&nbsp; Ολυμπία</div>
+<p class="item q">α) Οι ομάδες που προστάτευαν τους θησαυρούς τους λέγονταν <select class="bk" data-ans="αμφικτιονίες"></select>. <span class="mk"></span></p>
+<p class="item q">β) Οι νικητές έπαιρναν ένα κλαδί <select class="bk" data-ans="ελιάς"></select>. <span class="mk"></span></p>
+<p class="item q">γ) Οι Ολυμπιακοί Αγώνες γίνονταν στην <select class="bk" data-ans="Ολυμπία"></select>. <span class="mk"></span></p>
+<p class="item q">δ) Το πιο γνωστό μαντείο ήταν το μαντείο των <select class="bk" data-ans="Δελφών"></select>. <span class="mk"></span></p>
+<p class="item q">ε) Γίνονταν κάθε <select class="bk" data-ans="τέσσερα"></select> χρόνια. <span class="mk"></span></p>
+<p class="item q">στ) Οι Έλληνες πήγαιναν στα <select class="bk" data-ans="μαντεία"></select> για να λύσουν τα προβλήματά τους. <span class="mk"></span></p>
+<p class="item"><b>ζ) Διάλεξε Σωστό ή Λάθος:</b></p>
+<div class="row q"><span class="t">Στους Ολυμπιακούς Αγώνες έπαιρναν μέρος άνθρωποι από όλους τους λαούς.</span><div class="tf" data-ans="Λ"><button type="button" data-v="Σ">Σ</button><button type="button" data-v="Λ">Λ</button></div><span class="mk"></span></div>
+<h2><span class="n">4.</span> Σε ποια κατηγορία ανήκει κάθε λέξη;</h2>
+<div class="row q"><span class="t"><b>μελανόμορφος ρυθμός</b></span><select class="ct" data-ans="αγγεία"></select><span class="mk"></span></div>
+<div class="row q"><span class="t"><b>Κόρη</b></span><select class="ct" data-ans="αγάλματα"></select><span class="mk"></span></div>
+<div class="row q"><span class="t"><b>δωρικός ρυθμός</b></span><select class="ct" data-ans="κτίρια"></select><span class="mk"></span></div>
+<div class="row q"><span class="t"><b>ερυθρόμορφος ρυθμός</b></span><select class="ct" data-ans="αγγεία"></select><span class="mk"></span></div>
+<div class="row q"><span class="t"><b>Κούρος</b></span><select class="ct" data-ans="αγάλματα"></select><span class="mk"></span></div>
+<div class="row q"><span class="t"><b>ιωνικός ρυθμός</b></span><select class="ct" data-ans="κτίρια"></select><span class="mk"></span></div>
+<p class="item q">Τα αγάλματα της εποχής ήταν φτιαγμένα από <input class="blank m" data-ans="μάρμαρο"> <span class="mk"></span></p>
+<h2><span class="n">5.</span> Διάλεξε Σωστό (Σ) ή Λάθος (Λ).</h2>
+<div class="row q"><span class="t">1. Ο Ησίοδος ήταν ο πιο σημαντικός ποιητής της λυρικής ποίησης.</span><div class="tf" data-ans="Λ"><button type="button" data-v="Σ">Σ</button><button type="button" data-v="Λ">Λ</button></div><span class="mk"></span></div>
+<div class="row q"><span class="t">2. Στη διδακτική ποίηση οι άνθρωποι διάβαζαν ποιήματα και έπαιζαν λύρα.</span><div class="tf" data-ans="Λ"><button type="button" data-v="Σ">Σ</button><button type="button" data-v="Λ">Λ</button></div><span class="mk"></span></div>
+<div class="row q"><span class="t">3. Η διδακτική ποίηση έδειχνε στους ανθρώπους πώς να φέρονται σωστά.</span><div class="tf" data-ans="Σ"><button type="button" data-v="Σ">Σ</button><button type="button" data-v="Λ">Λ</button></div><span class="mk"></span></div>
+<div class="row q"><span class="t">4. Οι φιλόσοφοι προσπαθούσαν να εξηγήσουν πώς δημιουργήθηκε ο κόσμος.</span><div class="tf" data-ans="Σ"><button type="button" data-v="Σ">Σ</button><button type="button" data-v="Λ">Λ</button></div><span class="mk"></span></div>
+
+  <div class="bar">
+    <button id="check" type="button">Έλεγχος</button>
+    <button id="reset" type="button">Νέα προσπάθεια</button>
+    <span id="score" role="status" aria-live="polite"></span>
+  </div>
+  <footer>© myspiderwebsite</footer>
+</div>
+<template id="bankOpts"><option value="">—</option><option>Δελφών</option><option>τέσσερα</option><option>αμφικτιονίες</option><option>μαντεία</option><option>ελιάς</option><option>Ολυμπία</option></template>
+<template id="catOpts"><option value="">—</option><option value="αγγεία">Αγγεία</option><option value="κτίρια">Κτίρια και ναοί</option><option value="αγάλματα">Αγάλματα</option></template>
+<script>
+(function () {
+  function fill(selector, tplId) {
+    var html = document.getElementById(tplId).innerHTML;
+    document.querySelectorAll(selector).forEach(function (s) { s.innerHTML = html; });
+  }
+  fill('select.bk', 'bankOpts');
+  fill('select.ct', 'catOpts');
+
+  // κανονικοποίηση: χωρίς τόνους/κεφαλαία/τελικό ς/κενά
+  function norm(s) {
+    return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+      .replace(/ς/g, 'σ').replace(/[^a-z0-9α-ω]/g, '');
+  }
+  var CITIES = ['αθηνα', 'σπαρτη'];
+
+  document.querySelectorAll('.tf').forEach(function (box) {
+    box.addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      box.querySelectorAll('button').forEach(function (x) { x.classList.remove('sel'); });
+      b.classList.add('sel'); box.dataset.v = b.dataset.v;
+    });
+  });
+
+  function valueOf(el) { return el.classList.contains('tf') ? (el.dataset.v || '') : el.value; }
+
+  document.getElementById('check').addEventListener('click', function () {
+    var total = 0, right = 0;
+    var cityVals = [];
+    document.querySelectorAll('[data-set="cities"]').forEach(function (i) { cityVals.push(norm(i.value)); });
+
+    document.querySelectorAll('.q').forEach(function (q) {
+      var allOk = true;
+      q.querySelectorAll('[data-ans],[data-set]').forEach(function (f) {
+        total++;
+        var v = valueOf(f), ok = false;
+        if (f.dataset.set === 'cities') {
+          var nv = norm(v);
+          ok = CITIES.indexOf(nv) !== -1 && cityVals.filter(function (c) { return c === nv; }).length === 1;
+        } else {
+          var alts = f.dataset.ans.split('|').map(norm);
+          ok = v !== '' && alts.indexOf(norm(v)) !== -1;
+        }
+        if (ok) right++; else allOk = false;
+      });
+      q.classList.toggle('ok', allOk);
+      q.classList.toggle('bad', !allOk);
+    });
+
+    var msg = 'Σωστά: ' + right + ' από ' + total + '. ';
+    var r = right / total;
+    msg += r === 1 ? 'Μπράβο, τα έκανες όλα σωστά!' : r >= 0.8 ? 'Πολύ καλά! Δες τα ✗ και δοκίμασε ξανά.' : 'Κοίτα ξανά τα ✗ και διόρθωσέ τα.';
+    document.getElementById('score').textContent = msg;
+  });
+
+  document.getElementById('reset').addEventListener('click', function () {
+    document.querySelectorAll('input.blank').forEach(function (i) { i.value = ''; });
+    document.querySelectorAll('select').forEach(function (s) { s.selectedIndex = 0; });
+    document.querySelectorAll('.tf').forEach(function (b) {
+      delete b.dataset.v; b.querySelectorAll('button').forEach(function (x) { x.classList.remove('sel'); });
+    });
+    document.querySelectorAll('.q').forEach(function (q) { q.classList.remove('ok', 'bad'); });
+    document.getElementById('score').textContent = '';
+  });
+})();
+</script>
+</body>
+</html>
